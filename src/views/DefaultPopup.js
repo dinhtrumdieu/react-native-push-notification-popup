@@ -9,9 +9,8 @@ const { width: deviceWidth } = Dimensions.get('window');
 const CONTAINER_MARGIN_TOP = (
   Platform.OS === 'ios'
     ?
-    isIphoneX() ? 44 : 20
-    :
-    StatusBar.currentHeight + 10);  // Just to add a bit more padding
+    isIphoneX() ? 54 : 30
+    : 10);  // Just to add a bit more padding
 
 const slideOffsetYToTranslatePixelMapping = {
   inputRange: [0, 1],
@@ -125,7 +124,7 @@ export default class DefaultPopup extends Component {
         });
     }
   }
-  
+
   renderPopupContent = () => {
     const { appIconSource, appTitle, timeText, title, body } = this.state;
     const { renderPopupContent } = this.props;
